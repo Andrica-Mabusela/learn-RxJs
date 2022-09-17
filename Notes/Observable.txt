@@ -1,0 +1,5 @@
+Observables
+=> Observables emits data over a period of time
+=> Observables needs to be subscribed else it won't do anything on it's own.
+=> An observer has 3 methods namely -> next, complete, and error
+=> Angular uses Observables extensively under the hood for routing, Forms and almost all features

@@ -1,0 +1,23 @@
+# Most operator takes in Observable as input and output will also be an observable
+
+# An operator is a pure function
+
+What is a pure function?
+* A function that returns the same output value when given the same input value.
+* Has no side effects.
+
+# We have operators for below functioning
+
+* Creation
+* Mathematical
+* Join
+* Transformation
+* Utitlity
+* Conditional
+* multicasting
+* Error handling
+
+
+## 1. Of operator
+
+=> make observable from a string or array or an object

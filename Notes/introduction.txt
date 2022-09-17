@@ -1,0 +1,40 @@
+What is Reactive Programming?
+* Reactive Programming is an asynchronous Programming paradigm concerned with data streams and the propagation of change.
+
+* RxJs (Reactive Extensions for Javascript) is a library for Reactive programming using observables that makes it easier
+to compose asynchronous or callback-based code.
+
+* RxJs is a library for composing asynchronous and event-based programs by using observable sequences
+
+* It provides one core type, the Observable, satelite types (Observer, Scheduler, Subjects) and operators inspired by Array ( map, filter, reduce, every )
+to allow handling asynchronous events as collections.
+
+
+# What is an Observable?
+    - It's a data stream.
+
+
+
+# RxJs consists of 3 main things
+  - Observables
+  - Satelite Data Types - Observers, Schedulers, Subjects
+  - Operators 
+
+
+  * Subscriber
+   - It will listen to the Observable for data changes/updates
+
+
+RxJs Important Concepts
+1. Observable => Represents the idea of an invocable collection of future values or events
+
+2. Observer => is a collection of callbacks that knows how to listen to values delivered by the Observable.
+
+3. Subscription => Represents the execution of an Observable, is primarily useful for cancelling the execution.
+
+4. Operators => 
+
+5. Subject => is the equivalent to an EventEmitter, and the only way of multicasting a value or event to multiple Observers.
+
+6. Schedulers => are centralized dispatchers to control concurrency, allowing us to coordinate when computation happens,
+e.g setTimeout, or requestAnimationFrame or others
