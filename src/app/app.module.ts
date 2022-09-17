@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LearningObservablesComponent } from './components/learning-observables/learning-observables.component';
+import { LearnOperatorsComponent } from './components/learn-operators/learn-operators.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LearningObservablesComponent,
+    LearnOperatorsComponent
   ],
   imports: [
     BrowserModule,
