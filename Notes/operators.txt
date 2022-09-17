@@ -21,3 +21,22 @@ What is a pure function?
 ## 1. Of operator
 
 => make observable from a string or array or an object
+
+
+## 2. from operator
+=> from operator will create an observable from an array, an array-like object, a promise, an iterable object, or an observable-like object.
+
+
+## What is the difference between of and from operator
+=> Both of and from operators are creation operators
+=> from operator will create an observable from an array, an array-like object, a promise, an iterable object, or an observable-like object
+=> of operator can create an observable from a string, object or array. and is especially useful when working with models or interfaces.
+
+
+
+## fromEvent Operator
+=> capture an event and pass it as an observable.
+=> Creates an Observable that emits events of a specific type coming from the given event target.
+=> We can bind target elements and methods to make sure we get Observable as output.
+=> Angular specific -> we will use ViewChild, NativeElement as target element and bind events.
+

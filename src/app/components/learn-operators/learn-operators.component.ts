@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Observable, of, from, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-learn-operators',
@@ -10,7 +10,12 @@ export class LearnOperatorsComponent implements OnInit {
 
   constructor() { }
 
+  @ViewChild('validate')
+  validate: ElementRef;
+
   studentList = ['Penny', 'Amy', 'Benedette'];
+
+  departments: string[] = ['Finance', 'Markerting', 'IT'];
 
   studentName = 'Penny';
 
@@ -29,6 +34,10 @@ export class LearnOperatorsComponent implements OnInit {
   // Observable of object
   studentObject: Observable<{name: string; age: number;}> = of(this.studentObj);
 
+
+  // create an observable from an array using from operator
+  companyDepartments$ : Observable<string> = from(this.departments);
+
   ngOnInit(): void {
 
 
@@ -46,5 +55,18 @@ export class LearnOperatorsComponent implements OnInit {
     })
 
   }
+
+
+  rxJsEventObservable(){
+    const btnObservable$ = fromEvent(this.validate?.nativeElement, 'click');
+
+    btnObservable$.subscribe(data => {
+      console.log(data);
+    });
+
+  }
+
+  
+
 
 }
