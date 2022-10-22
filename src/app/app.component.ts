@@ -1,5 +1,19 @@
 import { Component, ElementRef, ViewChild, OnInit, AfterViewInit } from '@angular/core';
-import { fromEvent, Observable, throttleTime, mergeMap, map, interval, Subject, debounceTime, distinctUntilChanged, of, reduce, switchMap } from 'rxjs';
+import { fromEvent,
+         Observable,
+         take, 
+         takeWhile,
+         throttleTime, 
+         mergeMap, 
+         map, 
+         interval, 
+         Subject, 
+         debounceTime, 
+         distinctUntilChanged, 
+         of, 
+         reduce, 
+         switchMap
+ } from 'rxjs';
 
 
 @Component({
@@ -101,14 +115,10 @@ export class AppComponent implements OnInit, AfterViewInit {
       //   (combinedValue) => this.span.nativeElement.textContent = combinedValue
       // )
 
-      let obs1 = fromEvent(this.validate.nativeElement, 'click');
-      let obs2 = interval(1000);
+     let obs = interval(1000);
 
-      obs1.pipe(switchMap((event: any) => {
-        return obs2;
-      }))
-      .subscribe(console.log)
-
+     obs.pipe(takeWhile((v) => v > 4 ))
+      .subscribe(console.log);
       
 
     }
